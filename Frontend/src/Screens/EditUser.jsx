@@ -18,6 +18,7 @@ function EditUser() {
     const [email, setEmail] = useState(userForEdit.email)
     const {adminInfo} = useSelector((state)=>state.auth)
     const [update, setUpdate] = useState(false)
+    const imageUrl = 'http://localhost:5000/Images/'
 
     // useEffect(()=>{
     //     if(!userForEdit.name)
@@ -34,10 +35,11 @@ function EditUser() {
     useEffect(()=>{}, [update])
 
     const {handleSubmit, register, formState: {errors},} = useForm()
-
+    
     const submit = async(data)=>{
         try
         {
+          console.log('userForEdit://////////////////////////////////////////////////////////ewqqqqqqqqqqqqqqqqqqq', userForEdit);
             const res = await editUser({
                 _id:userForEdit._id,
                 name: data.name,
@@ -60,11 +62,12 @@ function EditUser() {
       <div className="row justify-content-center">
         <div className="col-md-8">
           <div className="card">
-            <img
-              className="card-img-top"
-              src={userForEdit.profilePic || "https://via.placeholder.com/150"}
-              alt="User Profile"
-            />
+          <img
+            className="card-img-top"
+            src={`${imageUrl}${userForEdit.profilePic}` || "https://via.placeholder.com/150"}
+            alt="User Profile"
+          />
+
             <div className="card-body text-center">
               <form onSubmit={handleSubmit(submit)}>
                 <div className="form-group">

@@ -32,6 +32,8 @@ const AdminDashboard = () => {
  
  const { adminInfo } = useSelector((state) => state.auth);
  const { userInfo } = useSelector((state) => state.auth);
+ const imageUrl = 'http://localhost:5000/Images/'
+
  
  const [logoutApiCall] = useLogoutMutation();
 
@@ -68,7 +70,7 @@ useEffect(()=>{
  useEffect(()=>{
     setData(userData)
     console.log('userData:', userData);
-    console.log('data:', data);
+    console.log('datahhhhhhhhhhhhhhhhhhhhhhhhh:', data);
  }, [userData, data])
 
  useEffect(()=>{}, [data])
@@ -155,10 +157,10 @@ useEffect(()=>{
                       <tr key={i} className="candidates-list">
                         <td className="title">
                           <div className="thumb">
-                            <Image
+                          <Image
                               className="img-fluid"
                               src={val.profilePic ?
-                                `http://localhost:3000/Images/${val.profile}` :
+                                `${imageUrl}${val.profilePic}` :
                                 'https://static.vecteezy.com/system/resources/previews/016/293/983/non_2x/profile-avatar-ui-element-template-user-account-editable-isolated-dashboard-component-flat-user-interface-visual-data-presentation-web-design-widget-for-mobile-application-with-dark-theme-vector.jpg'}
                               alt=""
                             />
