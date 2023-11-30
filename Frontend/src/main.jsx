@@ -11,6 +11,10 @@ import LoginScreen from './Screens/LoginScreen.jsx';
 import Register from './Screens/Register.jsx';
 import PofileScreen from './Screens/PofileScreen.jsx'; './Screens/PofileScreen'
 import PrivateRoute from './Components/PrivateRoute.jsx';
+import AdminSignInForm from './Screens/AdminLogin.jsx';
+import AdminDashboard from './Screens/AdminDashboard.jsx';
+import EditUser from './Screens/EditUser.jsx';
+
 
 
 const routes = createRoutesFromElements(
@@ -21,6 +25,9 @@ const routes = createRoutesFromElements(
     <Route path='' element={<PrivateRoute/>}>
       <Route path='/profile' element={<PofileScreen/>}/>
     </Route>
+    <Route path='/loginadmin' element={<AdminSignInForm/>}/>
+    <Route path='/dashboard' element={<AdminDashboard/>}/>
+    <Route path='/editUser' element={<EditUser/>}/>
   </Route>
 );
 

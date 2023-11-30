@@ -7,6 +7,7 @@ import { toast } from "react-toastify"
 import Loader from "../Components/Loader"
 import { setCredentials } from '../Slices/AuthSlice'
 import { useUpdateUserMutation } from "../Slices/UserApiSlice"
+import Header from "../Components/Header"
 
 
 function PofileScreen() {
@@ -69,6 +70,8 @@ function PofileScreen() {
 };
 
   return (
+    <>
+    <Header/>
 <FormContainer>
     <h1>Update Profile</h1>
      {/* Display profile picture */}
@@ -153,6 +156,7 @@ function PofileScreen() {
        
     </Form>
 </FormContainer>
+</>
   )
 }
 

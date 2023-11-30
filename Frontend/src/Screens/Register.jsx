@@ -7,7 +7,7 @@ import { toast } from "react-toastify"
 import Loader from "../Components/Loader"
 import { useRegisterMutation } from "../Slices/UserApiSlice"
 import { setCredentials } from '../Slices/AuthSlice'
-
+import Header from "../Components/Header"
 
 
 function Register() {
@@ -58,6 +58,8 @@ function Register() {
         }
     }
   return (
+    <>
+    <Header/>
 <FormContainer>
     <h1>Sign Up</h1>
     <Form onSubmit={submitHandler}>
@@ -117,6 +119,7 @@ function Register() {
        </Row>
     </Form>
 </FormContainer>
+</>
   )
 }
 

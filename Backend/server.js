@@ -9,6 +9,7 @@ connectDB()
 dotenv.config()
 import {router} from '../Routes/UserRoutes.js'
 import {notFound, errorHandler} from './Middleware/ErrorMiddleware.js'
+import {AdminRouter} from '../Routes/AdminRoute.js'
 
 const port = process.env.PORT || 5000
 
@@ -20,9 +21,11 @@ app.use(cookieParser())
 
 app.use(express.static('Backend/Public/'))
 
+//User
 app.use('/api/user', router)
 
-// app.use('/api/admin')
+//Admin
+app.use('/api/admin', AdminRouter)
 
 app.get('/',(req, res)=> res.send('server is running'))
 

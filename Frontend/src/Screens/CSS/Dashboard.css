@@ -1,0 +1,96 @@
+.form-outline {
+    width: 300px; 
+  }
+  
+  .user-dashboard-info-box {
+    margin-top: 20px;
+  }
+  
+  .user-table th {
+    font-weight: bold;
+  }
+  
+  .user-table .img-fluid {
+    max-width: 100px; 
+    height: auto;
+  }
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+
+.form-outline {
+  width: 300px;
+  
+}
+
+
+.user-dashboard-info-box {
+  margin-top: 20px;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th,
+.user-table td {
+  padding: 1rem;
+  text-align: left;
+  border: 1px solid #dee2e6;
+}
+
+.user-table th {
+  font-weight: bold;
+  background-color: #f8f9fa;
+}
+
+.user-table .candidates-list td {
+  vertical-align: middle;
+}
+
+
+.img-fluid {
+  max-width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+
+
+.no-users-image {
+  max-width: 50px;
+  height: auto;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
